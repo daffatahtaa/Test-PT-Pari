@@ -18,5 +18,5 @@ urlpatterns = [
     path('items/create/', views.create_item),
     path('items/<int:id>/update/', views.update_item),
     path('items/<int:id>/delete/', views.delete_item),
-    # path('docs/', schema_view.without_ui('swagger')),
+    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ]
